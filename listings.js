@@ -27,7 +27,7 @@ puppeteer.launch({ headless: false })
 
                 allItems.forEach(item => {
                     let itemData = {};
-                    item.city = cityAndState;
+                    itemData.city = cityAndState;
                     itemData.link = 'https://zeusliving.com' + item.querySelector('a[data-test="listing-link"]').getAttribute('href');
                     itemData.title = item.querySelector('div[data-test="listing-card-info"] > h3').textContent;
                     itemData.price = item.querySelector('div[data-test="price-display"]').textContent;
