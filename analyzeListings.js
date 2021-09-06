@@ -14,5 +14,8 @@ const sortByPrice = (a,b) => {
 
 let cleanedWithPriceOnly = listings.filter(item => !!item.price.match(/\d+/g))
 let sorted = cleanedWithPriceOnly.sort(sortByPrice);
-// sorted.forEach(item => console.log(item.price))
-console.log(sorted.slice(0,10))
+// top 30 cheapest
+// console.log(sorted.slice(0,30))
+
+// top w/ Sep or Oct availability: 
+console.log(sorted.slice(0, 40).filter(listing => listing.availableDate.includes('Sep') || listing.availableDate.includes('Oct') ).reverse())

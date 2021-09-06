@@ -8,7 +8,7 @@ let listingDB = new JsonDB(new Config("ListingsDB", true, false, '/'));
 console.log(`Number of cities: ${links.length}`);
 
 // define group, don't do all at once!
-let startIdx = 60;
+let startIdx = 110;
 let linksBatch = links.slice(startIdx, startIdx+10);
 
 puppeteer.launch({ headless: false })
