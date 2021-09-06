@@ -21,3 +21,6 @@ let sorted = cleanedWithPriceOnly.sort(sortByPrice);
 console.log(sorted.slice(0, 40).filter(listing => listing.availableDate.includes('Sep') || listing.availableDate.includes('Oct') || listing.availableDate.includes('Today') ).reverse())
 
 // all with price "New":
+// let newOnly = listings.filter(listing => listing.price == 'New')
+// console.log(newOnly)
+// console.log('Num new listings: ' + newOnly.length)
